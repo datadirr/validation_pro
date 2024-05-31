@@ -1,6 +1,7 @@
 ## 1.2.0
 
-* Validation like email address, mobile number, password, input formatter, etc.
+* add namespace for android.
+* upgrade dependencies.
 
 ## 1.1.0
 
