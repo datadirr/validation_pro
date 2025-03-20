@@ -29,7 +29,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('validation_pro')),
+        appBar: AppBar(
+          title: const Text('validation_pro'),
+        ),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Padding(
@@ -52,7 +54,9 @@ class _MyAppState extends State<MyApp> {
                         }
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     TextField(
                       keyboardType: TextInputType.number,
                       decoration: const InputDecoration(
@@ -67,7 +71,9 @@ class _MyAppState extends State<MyApp> {
                         }
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     TextFormField(
                       controller: _conPassword,
                       decoration: const InputDecoration(
@@ -86,7 +92,9 @@ class _MyAppState extends State<MyApp> {
                         _submit();
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     TextField(
                       decoration: const InputDecoration(
                         labelText: "Username",
@@ -100,26 +108,28 @@ class _MyAppState extends State<MyApp> {
                         }
                       },
                     ),
-                    const SizedBox(height: 20),
-                    TextField(
-                      keyboardType: TextInputType.number,
-                      inputFormatters: [Validate.intValueFormatter()],
-                      decoration: const InputDecoration(
-                        labelText: "Only int",
-                        hintText: "Only int",
-                      ),
+                    const SizedBox(
+                      height: 20,
                     ),
-                    const SizedBox(height: 20),
                     TextField(
-                      keyboardType: TextInputType.number,
-                      inputFormatters: [
-                        Validate.decimalValueFormatter(decimalPlaceValue: 2),
-                      ],
-                      decoration: const InputDecoration(
-                        labelText: "Only double",
-                        hintText: "Only double",
-                      ),
+                        keyboardType: TextInputType.number,
+                        inputFormatters: [Validate.intValueFormatter()],
+                        decoration: const InputDecoration(
+                          labelText: "Only int",
+                          hintText: "Only int",
+                        )),
+                    const SizedBox(
+                      height: 20,
                     ),
+                    TextField(
+                        keyboardType: TextInputType.number,
+                        inputFormatters: [
+                          Validate.decimalValueFormatter(decimalPlaceValue: 2)
+                        ],
+                        decoration: const InputDecoration(
+                          labelText: "Only double",
+                          hintText: "Only double",
+                        )),
                   ],
                 ),
               ),
