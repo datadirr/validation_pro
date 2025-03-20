@@ -5,8 +5,8 @@ class Validate {
   /// validation email address
   static bool isEmail(String email) {
     return RegExp(
-        r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
-        .hasMatch(email);
+      r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$',
+    ).hasMatch(email);
   }
 
   /// validation mobile number (Only Indian pattern and 10 digits mobile number accepted)
@@ -31,8 +31,8 @@ class Validate {
   /// At least one special character [@#$!%?]
   static bool isPassword(String password) {
     return RegExp(
-        r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%?])[A-Za-z\d@#$!%?]{6,12}$')
-        .hasMatch(password);
+      r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%?])[A-Za-z\d@#$!%?]{6,12}$',
+    ).hasMatch(password);
   }
 
   /// validation input int value
@@ -41,12 +41,24 @@ class Validate {
   }
 
   /// validation input decimal value
-  static decimalValueFormatter(
-      {int decimalPlaceValue = 2, bool allowedSign = false}) {
+  static decimalValueFormatter({
+    int decimalPlaceValue = 2,
+    bool allowedSign = false,
+  }) {
     return allowedSign
         ? FilteringTextInputFormatter.allow(
-        RegExp(r'^\d+\.?\d{0,' "${decimalPlaceValue.toString()}" '}'))
+          RegExp(
+            r'^\d+\.?\d{0,'
+            "${decimalPlaceValue.toString()}"
+            '}',
+          ),
+        )
         : FilteringTextInputFormatter.allow(
-        RegExp(r'^\d+\.?\d{0,' "${decimalPlaceValue.toString()}" '}'));
+          RegExp(
+            r'^\d+\.?\d{0,'
+            "${decimalPlaceValue.toString()}"
+            '}',
+          ),
+        );
   }
 }
