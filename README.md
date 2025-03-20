@@ -65,15 +65,15 @@ Validate.isPassword(password)
 * Input int value validation
 ```dart
 TextField(
-keyboardType: TextInputType.number,
-inputFormatters: [Validate.intValueFormatter()]
+  keyboardType: TextInputType.number,
+  inputFormatters: [Validate.intValueFormatter()]
 )
 ```
 
 * Input decimal value validation
 ```dart
 TextField(
-keyboardType: TextInputType.number,
-inputFormatters: [Validate.decimalValueFormatter(decimalPlaceValue: 3)]
+  keyboardType: TextInputType.number,
+  inputFormatters: [Validate.decimalValueFormatter(decimalPlaceValue: 3)]
 )
 ```
