@@ -36,12 +36,12 @@ class Validate {
   }
 
   /// validation input int value
-  static intValueFormatter() {
+  static TextInputFormatter intValueFormatter() {
     return FilteringTextInputFormatter.digitsOnly;
   }
 
   /// validation input decimal value
-  static decimalValueFormatter({
+  static FilteringTextInputFormatter decimalValueFormatter({
     int decimalPlaceValue = 2,
     bool allowedSign = false,
   }) {
