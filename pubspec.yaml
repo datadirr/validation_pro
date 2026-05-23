@@ -2,7 +2,7 @@ name: validation_pro
 description: "Validation like email address, mobile number, password, input formatter, etc."
 repository: https://github.com/datadirr/validation_pro
 homepage: https://datadirr.com
-version: 4.0.0
+version: 4.1.0
 
 environment:
   sdk: ^3.12.0
