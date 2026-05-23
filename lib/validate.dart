@@ -47,18 +47,18 @@ class Validate {
   }) {
     return allowedSign
         ? FilteringTextInputFormatter.allow(
-          RegExp(
-            r'^\d+\.?\d{0,'
-            "${decimalPlaceValue.toString()}"
-            '}',
-          ),
-        )
+            RegExp(
+              r'^\d+\.?\d{0,'
+              "${decimalPlaceValue.toString()}"
+              '}',
+            ),
+          )
         : FilteringTextInputFormatter.allow(
-          RegExp(
-            r'^\d+\.?\d{0,'
-            "${decimalPlaceValue.toString()}"
-            '}',
-          ),
-        );
+            RegExp(
+              r'^\d+\.?\d{0,'
+              "${decimalPlaceValue.toString()}"
+              '}',
+            ),
+          );
   }
 }
